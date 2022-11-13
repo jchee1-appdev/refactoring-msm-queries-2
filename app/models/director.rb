@@ -11,6 +11,9 @@
 #  updated_at :datetime         not null
 #
 class Director < ApplicationRecord
+
+  has_many :filmography, class_name: 'Movie'
+  
   def filmography
     key = self.id
 
